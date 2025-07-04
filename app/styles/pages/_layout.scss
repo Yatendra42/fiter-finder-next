@@ -1,0 +1,12 @@
+@use "../base/variables" as *;
+
+body {
+   font-family: $font-family;
+   font-style: normal;
+}
+
+.container {
+    width: 100%;
+    max-width: $desktop-layout;
+    margin: 0 auto;
+}
