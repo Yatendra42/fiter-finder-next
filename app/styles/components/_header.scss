@@ -5,9 +5,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 16px 60px;
+
     nav {
         display: flex;
         gap: 1.5rem;
+
         a {
             font-family: $font-family;
             font-weight: $weight-middle;
@@ -15,9 +17,69 @@ header {
             line-height: $line-height-primary;
             color: $black-primary;
             transition: all 0.3s ease;
+
             &:hover {
                 color: $brand-red;
             }
         }
     }
+
+
+
+@include desktop {
+  
+        padding: 16px 30px;
+        flex-direction: column;
+
+        nav {
+            margin-top: 20px;
+        }
+
+  
+
+
 }
+
+@include mobile {
+    flex-direction: row;
+   nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      flex-direction: column;
+      background: #fff;
+      width: 100%;
+      padding: 1rem 2rem;
+      border-top: 1px solid #ccc;
+       &.open {
+        display: flex;
+      }
+   }
+
+     
+}
+
+ .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: #333;
+      border-radius: 2px;
+    }
+
+    @include mobile {
+      display: flex;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,83 @@
+@use "../base/variables" as *;
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 60px;
+
+
+
+
+.fet-card {
+   box-shadow: 1px 5px 26px 0px #00000024;
+   border: 1px solid #EAEAEA;
+   border-radius: 8px;
+   flex: 0 0 312px;
+   overflow: hidden;
+   cursor: pointer;
+   position: relative;
+
+   &:hover {
+   .fet-card-title {
+     color: $brand-red; 
+   }
+}
+   
+
+   &-content {
+     padding: 15px;
+   }
+
+   &-title {
+    font-family: $font-family;
+    font-weight: $weight-bold;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    }
+
+    &-description {
+     font-family: $font-family;
+     font-weight: $weight-middle;
+     font-size: 14px;
+    color: $gray;
+    }
+
+    .trending-flag {
+        color: $white;
+        background-color: $brand-red;
+        padding: 5px 9px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+
+
+        .trending-icon {
+
+         }
+
+         .trending-title {
+            font-family: $font-family;
+            font-weight: $weight-middle;
+            font-size: 12px;
+            margin-left: 3px;
+         }
+    }
+
+}
+
+        @include desktop {
+        padding: 60px 30px;
+     
+
+            .fet-card{
+                flex: 1 1 312px;
+            }
+        
+    }
+
+    @include mobile {}
+}

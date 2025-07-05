@@ -1,0 +1,140 @@
+@use "../base/variables" as *;
+
+footer {
+    position: relative;
+    padding: 60px;
+    background-color: $black-footer;
+   
+
+    .container {
+        display: flex;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 18px;
+        background: #2A7B9B;
+        background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(252, 106, 107, 1) 0%, rgba(173, 13, 21, 1) 100%);
+        z-index: 0;
+    }
+
+    .intro-section {
+        flex: 1 1 30%;
+        padding: 20px;
+        border-right: 1px solid #eaeaea;
+
+        .brand-description {
+            font-family: $font-family;
+            font-weight: $weight-normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            margin: 40px 0;
+        }
+    }
+
+    .product-list {
+        flex: 1 1 20%;
+        padding: 20px;
+        border-right: 1px solid #eaeaea;
+
+        ul {
+            li {
+                a {
+                    font-family: $font-family;
+                    font-weight: $weight-bold;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $white;
+                    text-decoration: none;
+                    display: block;
+                    margin-bottom: 10px;
+
+                    &:hover {
+                        color: $brand-red;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .useful-link,
+    .contact {
+        flex: 1 1 20%;
+        padding: 20px;
+        border-right: 1px solid #eaeaea;
+
+        h2 {
+            font-family: $font-family;
+            font-weight: $weight-bold;
+            font-size: 18px;
+            line-height: 24px;
+            color: $white;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            li {
+                a {
+                    font-family: $font-family;
+                    font-weight: $weight-normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $white;
+                    text-decoration: none;
+                    display: block;
+                    margin-bottom: 10px;
+
+                    &:hover {
+                        color: $brand-red;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .contact {
+        flex: 1 1 30%;
+        border: none;
+    }
+
+    .footer-copyright {
+        font-family: $font-family;
+        font-weight: $weight-normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        text-align: center;
+        display: block;
+        margin: 20px 0 10px;
+    }
+
+        @include desktop {
+         .container {
+            flex-wrap: wrap;
+         }
+            .intro-section, .product-list, .useful-link, .contact {
+                flex: 1 1 100%;
+                padding: 20px;
+                border-right: none;
+                border-bottom: 1px solid #eaeaea;
+            }
+    }
+
+    @include mobile {
+         .intro-section, .product-list, .useful-link, .contact {
+                flex: 1 1 100%;
+                padding: 20px;
+                border-right: none;
+                border-bottom: 1px solid #eaeaea;
+            }
+    }
+
+}

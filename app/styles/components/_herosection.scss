@@ -13,6 +13,7 @@
         line-height: 1.2;
         text-align: center;
         margin-bottom: 10px;
+
         .color-red {
             color: $brand-red;
         }
@@ -34,6 +35,17 @@
         display: flex;
         justify-content: center;
 
+        .contact-form {
+            flex: 1;
+            max-width: 872px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            background-color: $black-secondary;
+            border-radius: 10px;
+        }
+
         .search-bar {
             padding: 10px 20px 10px 38px;
             border-radius: 8px;
@@ -43,6 +55,30 @@
             color: $white;
             font-family: $font-family;
             background: url("../../../public/images/search.svg") no-repeat 10px center;
+            width: 100%;
+        }
+
+        .select-category {
+            padding: 10px 20px 10px 38px;
+            border-radius: 8px;
+            border: 1px solid $black-primary;
+            color: $white;
+            margin-left: 12px;
+            font-family: $font-family;
+            background-color: $black;
         }
     }
+
+    @include desktop {
+        padding: 40px 30px 30px;
+        .card-wrapper {
+            padding: 60px 30px;
+
+            .fet-card{
+                flex: 1;
+            }
+        }
+    }
+
+    @include mobile {}
 }

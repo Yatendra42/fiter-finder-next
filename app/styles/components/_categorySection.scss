@@ -1,0 +1,68 @@
+@use "../base/variables" as *;
+
+.categories-section {
+    margin: 0 auto 60px;
+   
+ 
+
+    .container {
+        padding: 40px 60px;
+       
+    }
+
+    .categories-container {
+        padding: 40px 24px;
+        border-radius: 8px;
+        border: 1px solid #EAEAEA;
+        background-color: $gary-light;  
+    }
+   
+
+    .heading {
+        font-family: $font-family;
+        font-weight: $weight-bold;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .list-number {
+        font-family: $font-family;
+        font-weight: $weight-bold;
+        font-size: 42px;
+        line-height: 50px;
+        color: $brand-red;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .categories-list-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .categories-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+       .category-item {
+        font-family: $font-family;
+        font-weight: $weight-middle;
+        font-size: 18px;
+        line-height: 20px;
+        color: $black-tertiary;
+        padding: 8px 15px;
+        background-color: $gary-list-light;
+        border-radius: 2px;
+        border: 1px solid #EAEAEA;
+        margin-bottom: 12px;;
+       }
+    }
+
+    @include desktop {
+         .container {
+            padding: 0 30px;
+         }
+    }
+
+@include mobile {}
+}

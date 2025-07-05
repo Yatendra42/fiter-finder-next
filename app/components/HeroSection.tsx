@@ -7,10 +7,19 @@ export default function HeroSection() {
 categories. Find exactly what you're looking for from verified sellers.</p>
    <div className="form-container">
         <form className="contact-form" >
-      <label>
+      
       
         <input type="text" name="name" placeholder="Search Categories..." className="search-bar" />
-      </label>
+
+        <select name="category" className="select-category">
+          <option value="all">Trending</option>
+          <option value="fetish">Fetish</option>
+          <option value="kink">Kink</option>
+          <option value="bdsm">BDSM</option>
+          <option value="roleplay">Roleplay</option>
+        </select>
+     
+    
       </form>
    </div>
         </div>
